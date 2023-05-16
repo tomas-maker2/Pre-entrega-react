@@ -1,0 +1,38 @@
+.banner{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: url("https://cdn.motor1.com/images/mgl/P33WYL/s1/ferrari-sp48-unica.webp") , linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    z-index: -1;
+}
+
+.banner-container{
+    text-align: center;
+    padding: 15% 0;
+}
+
+.btn-tienda{
+    font-size: 36px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 12px;
+    color: #e9d9d9;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+
+    transition: .5s ease background-color;
+}
+
+.btn-tienda:hover{
+    background-color: rgb(17, 15, 15);
+}
+
+.banner p{
+    font-size: 30px;
+    color: #ffffff;
+    opacity: 1;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
