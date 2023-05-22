@@ -1,5 +1,3 @@
-
-
 import CartContent from './Components/CartContent/CartContent';
 import Contacto from './Components/Contacto/Contacto';
 import Navbar from './Components/NavBar/Navbar';
@@ -7,6 +5,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Tienda from './Components/Tienda/Tienda';
 import Inicio from './Components/Inicio/Inicio';
 import DataProvider from './Components/Context/DataContext';
+import Item from './Components/Item/Item';
 
 function App() {
   return (
@@ -20,6 +19,7 @@ function App() {
       <Route path='/contacto' element={<Contacto/>}/>
       <Route path='/cart' element={<CartContent/>}/>
       <Route path='/tienda' element={<Tienda/>}/>
+      <Route path='/productos/:productosId' element={<Item/>}/>
     </Routes>
     
     </BrowserRouter>    

@@ -21,7 +21,7 @@ function Productos() {
                 <h3>{product.name}</h3>
                 <h4>{product.price}$</h4>
                 <button onClick={()=> buyProducts(product)}>Comprar</button>
-                <Link className="link" to={`/Item/${product.id}`}>Ver más</Link>
+                <Link className="link" to={`/productos/${product.id}`}>Ver más</Link>
             </div>
         )
     })
