@@ -5,7 +5,7 @@
         "price": 200.000,
         "img": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_3527df86f78d43bd93da22ef9a8eb9d6.jpg",
         "quanty": 1,
-        "color":"grey"
+        "category": "lamborghini"
     }
     ,
     {
@@ -14,7 +14,7 @@
         "price": 300.000,
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMonXrKJBr3YIyaKhIsaz6UbsO_4mHST5cVkM9Or1KIyoy3aLlOdGuLHlsdGgyqDvjItQ&usqp=CAU",
         "quanty": 1,
-        "color":"grey"
+        "category": "lamborghini"
     }
     ,
     {
@@ -23,7 +23,7 @@
         "price": 500.000,
         "img": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/L3UYLCT34NA5LFLKBVXQRA6NHM.jpg",
         "quanty": 1,
-        "color": "red"
+        "category": "ferrari"
     }
     ,
     {
@@ -32,7 +32,7 @@
         "price": 700.000,
         "img": "https://www.autoscout24.pl/cms-content-assets/l9rfbSGSzQxClGZV5pl2T-4a396daa7b826abdba5b5570be6422f1-lamborghini-aventador-m-01-1100.jpg",
         "quanty": 1,
-        "color": "red"
+        "category": "lamborghini"
     }
     ,
     {
@@ -41,7 +41,7 @@
         "price": 900.000,
         "img": "https://www.autoscout24.pl/cms-content-assets/l9rfbSGSzQxClGZV5pl2T-4a396daa7b826abdba5b5570be6422f1-lamborghini-aventador-m-01-1100.jpg",
         "quanty": 1,
-        "color": "red"
+        "category": "lamborghini"
     }
     ,
     {
@@ -50,7 +50,7 @@
         "price": 400.000,
         "img": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/L3UYLCT34NA5LFLKBVXQRA6NHM.jpg",
         "quanty": 1,
-        "color": "red"
+        "category": "ferrari"
     }
     ,
     {
@@ -59,7 +59,7 @@
         "price": 500.000,
         "img": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/05/05/16517501046152.jpg",
         "quanty": 1,
-        "color": "red"
+        "category":"ferrari"
     }
     ,
     {
@@ -68,7 +68,7 @@
         "price": 600.000,
         "img": "https://cdn.motor1.com/images/mgl/0eeMVW/s1/2024-ferrari-purosangue-exterior-front-quarter.jpg",
         "quanty": 1,
-        "color":"grey"
+        "category":"ferrari"
     }
     ,
     {
@@ -77,7 +77,7 @@
         "price": 800.000,
         "img": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/05/05/16517501046152.jpg",
         "quanty": 1,
-        "color":"red"
+        "category":"ferrari"
     }
     ,
     {
@@ -86,7 +86,7 @@
         "price": 900.000,
         "img": "https://img.remediosdigitales.com/ed9f81/ferrari-296-gtb-2022-informacion-y-precio/1366_2000.jpeg",
         "quanty": 1,
-        "color":"red"
+        "category":"ferrari"
     }
     ,
     {
@@ -95,7 +95,7 @@
         "price": 400.000,
         "img": "https://media.gq.com.mx/photos/63d5789393c9fe36c9a8ea86/16:9/w_2560%2Cc_limit/Maserati%2520GranTurismo%2520PrimaSerie-2.jpg",
         "quanty": 1,
-        "color":"grey"
+        "category":"masserati"
     }
     ,
     {
@@ -104,7 +104,7 @@
         "price": 600.000,
         "img": "https://fotografias.lasexta.com/clipping/cmsimages02/2022/10/03/44F3CF07-70FC-41C0-AA4C-3CB218F0A9EC/maserati-granturismo_98.jpg?crop=1920,1080,x0,y5&width=1900&height=1069&optimize=high&format=webply",
         "quanty": 1,
-        "color":"red"
+        "category":"masserati"
     }
     ,
     {
@@ -113,7 +113,7 @@
         "price": 700.000,
         "img": "https://media.gq.com.mx/photos/63d5789393c9fe36c9a8ea86/16:9/w_2560%2Cc_limit/Maserati%2520GranTurismo%2520PrimaSerie-2.jpg",
         "quanty": 1,
-        "color":"grey"
+        "category":"masserati"
     }
     ,
     {
@@ -122,7 +122,7 @@
         "price": 800.000,
         "img": "https://www.razaoautomovel.com/wp-content/uploads/2023/01/Maserati-GranTurismo-Folgore-1_925x520_acf_cropped-925x520.jpg",
         "quanty": 1,
-        "color":"grey"
+        "category":"masserati"
     }
     ,
     {
@@ -131,6 +131,6 @@
         "price": 900.000,
         "img": "https://static.motor.es/fotos-noticias/2021/04/maserati-f-tributo-202177280-1618831014_1.jpg",
         "quanty": 1,
-        "color":"blue"
+        "category":"masserati"
     }
 ]
