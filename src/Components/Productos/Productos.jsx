@@ -22,7 +22,7 @@ function Productos() {
                 <h4>{product.price}$</h4>
                 <button onClick={()=> buyProducts(product)}>Comprar</button>
                 <Link className="link" to={`/productos/${product.id}`}>Ver más</Link>
-                <Link className="link" to={`/productos/${product.category}`}>Marca</Link>
+                <Link className="link" to={`/products/${product.category}`}>Marcas</Link>
             </div>
         )
     })
