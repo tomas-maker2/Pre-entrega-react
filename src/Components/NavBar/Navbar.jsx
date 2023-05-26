@@ -29,6 +29,9 @@ function Navbar () {
                 <Link className="nav__item" to={"/"}>Inicio</Link>
                 <Link className="nav__item" to={"/tienda"}>Tienda</Link>
                 <Link className="nav__item" to={"/contacto"} >Contacto</Link>
+                <Link className="nav__item" to={"/ferrari"}>Ferrari</Link>
+                <Link className="nav__item" to={"/lamborghini"}>Lamborghini</Link>
+                <Link className="nav__item" to={"/masserati"}>Masserati</Link>
                 <Link className="nav__item" to={"/cart"}>
                     <CartWidget/>
                     

@@ -7,6 +7,10 @@ import Inicio from './Components/Inicio/Inicio';
 import DataProvider from './Components/Context/DataContext';
 import Item from './Components/Item/Item';
 import ProductDetailsCategory from './Components/Categorias/ProductDetailsCategory';
+import Ferrari from './Components/Marcas/Ferrari';
+import Lamborghini from './Components/Marcas/Lamborghini';
+import Masseraiti from './Components/Marcas/Masseraiti';
+
 
 
 
@@ -26,6 +30,9 @@ function App() {
       <Route path='/tienda' element={<Tienda/>}/>
       <Route path='/productos/:productosId' element={<Item/>}/>
       <Route path='/products/:categoria' element={<ProductDetailsCategory/>}/>
+      <Route path='/ferrari' element={<Ferrari/>}/>
+      <Route path='/lamborghini' element={<Lamborghini/>}/>
+      <Route path='/masserati' element={<Masseraiti/>}/>
     </Routes>
     
     </BrowserRouter>    
