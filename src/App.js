@@ -6,6 +6,7 @@ import Inicio from './Components/Inicio/Inicio';
 import DataProvider from './Components/Context/DataContext';
 import Item from './Components/Item/Item';
 import Tienda from './Components/Tienda/Tienda';
+import Detalles from './Components/Tienda/TiendaDetaills';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path='/contacto' element={<Contacto/>}/>
       <Route path='/cart' element={<CartContent/>}/>
       <Route path='/tienda' element={<Tienda/>}/>
+      <Route path='/tienda/:id' element={<Detalles/>}/>
       <Route path='/productos/:productosId' element={<Item/>}/>
       
       

@@ -1,57 +1,55 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
-import { useContext } from "react";
-import {dataContext} from '../Context/DataContext';
+import './tienda.css'
+
+import { getFirestore, collection, getDocs, doc, getDoc} from 'firebase/firestore'
+import { Link } from 'react-router-dom';
 
 function Tienda() {
 
-  const {data, setData} = useContext(dataContext);
+  const [tasks, setTasks] = useState();
+  const [msg, setMsg] = useState("Cargando...");
 
-  const filterResult = (catItem) => {
-    const result = data.filter((curData) => {
-      return curData.category === catItem
-    });
-    setData(result)
-  }
+
+  // useEffect(()=> {
+  //   const db = getFirestore();
+  //     const docRef = doc(db, "tasks" , "4KZ22micKF1Z7TemCVnJ");
+  //     getDoc(docRef).then((doc) => {
+  //       if(doc.exists()){
+  //         setTask(doc.data())
+  //       }else{
+  //         setMsg("No hay datos")
+  //       }
+  //     })
+  // },[])
+
+  useEffect(() => {
+    const db = getFirestore()
+    const collectionRef = collection(db, "tasks");
+    getDocs(collectionRef).then((querySnapshot) => {
+      const tasksCollection = querySnapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+      setTasks(tasksCollection);
+    })
+  },[])
+
+    if(!tasks) return <p>{msg}</p>
 
   return (
     <>
-      <h1 className='text-center text-dark mt-4 '>A Comprar</h1>
-      <div className="container-fluid mx-2">
-        <div className="row mt-5 mx-2">
-          <div className="col-md-3">
-            <button className="btn btn-warning w-100 mb-4 text-uppercase fs-3" onClick={() => setData(data)}>Todos los productos</button>
-            <button className="btn btn-warning w-100 mb-4 text-uppercase fs-3" onClick={() => filterResult('ferrari')}>Ferrari</button>
-            <button className="btn btn-warning w-100 mb-4 text-uppercase fs-3" onClick={() => filterResult('lamborghini')}>Lamborghini</button>
-            <button className="btn btn-warning w-100 text-uppercase fs-3"  onClick={() => filterResult('masserati')}>Masserati</button>
-          </div>
-          <div className="col-md-9">
-            <div className="row">
-              {
-                data.map((values) => {
-                  return (
-                    <>
-                      <div className="col-md-4" key={values.id}>
-                      <div class="card">
-                      <img className='card-img-top' src={values.img} alt={values.name} />
-                      <div class="card-body">
-                      <h5 class="card-title">{values.name}</h5>
-                      <p class="card-text">{values.price}$</p>
-                      </div>
-                      </div>
-                      </div>
-                    </>
-                  )
-                })
-              }
-              
-
-            
-              
-            </div>
-          </div>
+    <div className='cartas'>
+    {tasks.map((task) => (
+      <div class="card" key={task.name}>
+      <img src={task.img} alt={task.name} />
+        <div class="card-body">
+          <p>{task.id}</p>
+          <h5 class="card-title">
+            <Link to={`/tienda/${task.id}`}>{task.name}</Link>
+            </h5>
+          <p class="card-text">{task.price}</p>
         </div>
-      </div>
+    </div>
+    ))}
+    </div>
     </>
   )
 }
