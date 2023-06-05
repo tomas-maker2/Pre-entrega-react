@@ -2,26 +2,18 @@ import React, { useEffect, useState } from 'react';
 
 import './tienda.css'
 
-import { getFirestore, collection, getDocs, doc, getDoc} from 'firebase/firestore'
+import { getFirestore, collection, getDocs} from 'firebase/firestore'
 import { Link } from 'react-router-dom';
+
+import { useContext } from "react";
+import {dataContext} from '../Context/DataContext';
 
 function Tienda() {
 
   const [tasks, setTasks] = useState();
-  const [msg, setMsg] = useState("Cargando...");
+  const [msg] = useState("Cargando...");
 
-
-  // useEffect(()=> {
-  //   const db = getFirestore();
-  //     const docRef = doc(db, "tasks" , "4KZ22micKF1Z7TemCVnJ");
-  //     getDoc(docRef).then((doc) => {
-  //       if(doc.exists()){
-  //         setTask(doc.data())
-  //       }else{
-  //         setMsg("No hay datos")
-  //       }
-  //     })
-  // },[])
+  const {buyProducts} = useContext(dataContext);
 
   useEffect(() => {
     const db = getFirestore()
@@ -44,7 +36,8 @@ function Tienda() {
           <p>{task.id}</p>
           <h5 class="card-title">
             <Link to={`/tienda/${task.id}`}>{task.name}</Link>
-            </h5>
+          </h5>
+          <button onClick={()=> buyProducts(task)}>Comprar</button>
           <p class="card-text">{task.price}</p>
         </div>
     </div>

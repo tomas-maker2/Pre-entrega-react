@@ -10,7 +10,7 @@ function Item() {
 
     let { productosId } = useParams();
 
-    const {data} = useContext(dataContext);
+    const {data, buyProducts} = useContext(dataContext);
 
     let productosSelected = data.find(product => product.id === Number(productosId))
 
@@ -23,6 +23,7 @@ function Item() {
       <div className="carta-info">
         <h2>{productosSelected.name}</h2>
         <p>{productosSelected.price}$</p>
+        <button onClick={()=> buyProducts(productosSelected)}>Comprar</button>
         <Link to={`/`}><button>Volver</button></Link>
       </div>
     </div>
