@@ -20,13 +20,13 @@ function Footer() {
                     <h4>CarsShop</h4>
                     <ul>
                         <li>
-                        <Link className='link'>ijsdpvnsdpv</Link>
+                        <Link to={"/"} className='link'>Inicio</Link>
                         </li>
                         <li>
-                        <Link className='link'>ijsdpvnsdpv</Link>
+                        <Link to={"/tienda"} className='link'>Tienda</Link>
                         </li>
                         <li>
-                        <Link className='link'>ijsdpvnsdpv</Link>
+                        <Link to={"/contacto"} className='link'>Contacto</Link>
                         </li>
                     </ul>
                 </div>
@@ -35,37 +35,18 @@ function Footer() {
                     <h4>Tienda</h4>
                     <ul>
                         <li>
-                        <Link className='link'>sapdcccccecec</Link>
+                        <Link to={"/categoriaFerrari"} className='link'>Ferrari</Link>
                         </li>
 
                         <li>
-                        <Link className='link'>sapdcccccecec</Link>
+                        <Link to={"/categoriaMasserati"} className='link'>Masserati</Link>
                         </li>
 
                         <li>
-                        <Link className='link'>sapdcccccecec</Link>
+                        <Link to={"/categoriaLambo"}  className='link'>Lamborghini</Link>
                         </li>
                     </ul>
                 </div>
-
-                <div className="footer-col">
-                    <h4>Tienda</h4>
-                    <ul>
-                        <li>
-                        <Link className='link'>sapdcccccecec</Link>
-                        </li>
-
-                        <li>
-                        <Link className='link'>sapdcccccecec</Link>
-                        </li>
-
-                        <li>
-                        <Link className='link'>sapdcccccecec</Link>
-                        </li>
-                    </ul>
-                </div>
-
-                
 
                 <div className="footer-col">
                     <h4>Contacto</h4>

@@ -37,8 +37,8 @@ const Detalles = () => {
               <div class="card-body">
                   <h5 class="card-title">{task.name}</h5>
                   <button onClick={()=> buyProducts(task)}>Comprar</button>
-                  <p class="card-text">{task.price}</p>
-                  <Link to={'/tienda'}>Volver</Link>
+                  <p class="card-text">{task.price}$</p>
+                  <Link className="volver" to={'/tienda'}>Volver</Link>
               </div>
       </div>
   </>

@@ -9,6 +9,8 @@ import Tienda from './Components/Tienda/Tienda';
 import Detalles from './Components/Detalles/Detalles';
 import Footer from './Components/Footer/Footer';
 import Ferrari from './Components/Ferrari/Ferrari';
+import Masserati from './Components/Masserati/Masserati';
+import Lambo from './Components/Lambo/Lambo';
 
 
 
@@ -33,6 +35,8 @@ function App() {
       <Route path='/tienda/:id' element={<Detalles/>}/>
       <Route path='/productos/:productosId' element={<Item/>}/>
       <Route path='/categoriaFerrari' element={<Ferrari/>}/>
+      <Route path='/categoriaMasserati' element={<Masserati/>}/>
+      <Route path='/categoriaLambo' element={<Lambo/>}/>
       
     </Routes>
     

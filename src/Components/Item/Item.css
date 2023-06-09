@@ -40,3 +40,18 @@
     background-color: black;
     color: #fff;
 }
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.boton__1{
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+}

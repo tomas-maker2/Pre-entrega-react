@@ -12,12 +12,12 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDntgAkLTm1VEIj4DynL1sBpy7K0hjj0jk",
+  apiKey: process.env.REACT_APP_FIREBASE_API ,
   authDomain: "primera-practica-6ed3a.firebaseapp.com",
   projectId: "primera-practica-6ed3a",
   storageBucket: "primera-practica-6ed3a.appspot.com",
   messagingSenderId: "938243227137",
-  appId: "1:938243227137:web:820a65e583eb19f65c4a00",
+  appId: process.env.REACT_APP_FIREBASE_APP_ID ,
   measurementId: "G-1BTKJ3X1B7"
 };
 

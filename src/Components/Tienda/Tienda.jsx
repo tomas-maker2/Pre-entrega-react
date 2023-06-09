@@ -28,20 +28,22 @@ function Tienda() {
 
   return (
     <>
+    <div className='product-card-container'>
     <div className='cartas'>
     {tasks.map((task) => (
       <div class="card" key={task.name}>
       <img src={task.img} alt={task.name} />
         <div class="card-body">
-          <p>{task.id}</p>
+          <p className='id'>{task.id}</p>
           <h5 class="card-title">
-            <Link to={`/tienda/${task.id}`}>{task.name}</Link>
+            <Link className='title_style' to={`/tienda/${task.id}`}>{task.name}</Link>
           </h5>
           <button onClick={()=> buyProducts(task)}>Comprar</button>
-          <p class="card-text">{task.price}</p>
+          <p class="card-text">{task.price}$</p>
         </div>
     </div>
     ))}
+    </div>
     </div>
     </>
   )

@@ -1,0 +1,31 @@
+.product-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 700px;
+    align-items: center;
+}
+
+.volver{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    border: none;
+    outline: none;
+    padding: 5px 7px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+}
+
+.icono{
+    margin-right: 6px;
+    cursor: pointer;
+}

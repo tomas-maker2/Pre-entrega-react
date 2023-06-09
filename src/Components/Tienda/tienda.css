@@ -5,3 +5,25 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.product-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.title_style{
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    
+}
+
+
+.id{
+    display: none;
+}
