@@ -18,10 +18,7 @@ Puedes filtrar por las 3 categorias en la barra de navegacion
 
 ### `Como se cargan los productos?`
 
-Los productos se cargan de dos diferentes formas.\
-
-- Utilizando context cargamos los producots de un `Json` mediante `Axios`, además de hacer el\
-carrito en el mismo context.
+Los productos se cargan de una forma.\
 
 - Utilizando Firebase(`Se utilizó .env`)
 
@@ -32,7 +29,7 @@ de productos que se carguen al carrito.
 
 
 Además permite aumentar la cantidad de los productos, o disminuirla, a voluntad\
-y eliminar los productos con un solo Click.
+y eliminar los productos con un solo Click y eliminar todos los productos a la vez.
 
 El carrito viene con un contador de los precios a tiempo real.
 

@@ -1,65 +1,89 @@
-import {dataContext} from '../Context/DataContext';
+import { dataContext } from '../Context/DataContext';
 import { useContext, useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-
 
 function CartTotal() {
-
-    const {cart} = useContext(dataContext);
-
-    const total = cart.reduce((acc, el) => acc + el.price * el.quanty, 0)
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const showModal = (value) => {
-      setIsOpen(value);
-    }
-
-    const [show, setShow] = useState(false);
-
-  const handleClose = () => {
-    setShow(false)
-    window.location.reload()
-  };
+  const { cart, clearCart } = useContext(dataContext);
+  const total = cart.reduce((acc, el) => acc + el.price * el.quanty, 0);
+  const [checkoutData, setCheckoutData] = useState({
+    name: '',
+    email: '',
+    address: '',
+  });
   
-  const handleCloseMenu = () => {
-    setShow(false)
-  };
-  const handleShow = () => setShow(true);
+  const [purchaseCompleted, setPurchaseCompleted] = useState(false);
 
+  const handleClearCart = () => {
+    clearCart();
+  };
+
+  const handleInputChange = (e) => {
+    setCheckoutData({
+      ...checkoutData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setPurchaseCompleted(true);
+    setTimeout(() => {
+      setPurchaseCompleted(false);
+      clearCart();
+    }, 5000);
+  };
 
   return (
     <div className='cartTotal'>
-        <h3>Total a pagar: {total}$</h3>
-        <button className='boton' onClick={() => showModal(true)}>Finalizar compra</button>
-        {isOpen && <>
-          <button className='boton-1' onClick={handleShow} >Seguro que quieres confirmar la compra?</button>
+      {purchaseCompleted ? (
+        <p>¡Compra realizada con éxito!</p>
+      ) : (
+        <>
+          <h3>Total a pagar: {total}$</h3>
+          <button className='eliminar__todo' onClick={handleClearCart}>
+              Eliminar todos los productos
+            </button>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor='name'>Nombre:</label>
+            <input
+              type='text'
+              id='name'
+              name='name'
+              value={checkoutData.name}
+              onChange={handleInputChange}
+              required
+            />
 
-      <Modal
-        show={show}
-        onHide={handleCloseMenu}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Confirmar Compra</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h2 className='finalizar'>
-            Estas seguro que quieres finalizar la compra?
-          </h2>
-          <p className='texto-finalizar'>Si finalizas la compra gastaras un total de <span className='total-boton'>{total}$</span> 
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <button className='boton-confirmar' onClick={handleClose}>Finalizar compra</button>
-        </Modal.Footer>
-      </Modal>
-      <button className='boton-2' onClick={() => showModal(false)}>No</button>
-    </>}
-        
+            <label htmlFor='email'>Email:</label>
+            <input
+              type='email'
+              id='email'
+              name='email'
+              value={checkoutData.email}
+              onChange={handleInputChange}
+              required
+            />
+
+            <label htmlFor='address'>Dirección:</label>
+            <input
+              type='text'
+              id='address'
+              name='address'
+              value={checkoutData.address}
+              onChange={handleInputChange}
+              required
+            />
+
+            
+            
+            
+
+            <button className='confirmar__compra' type='submit'>Realizar Pago</button>
+          </form>
+        </>
+      )}
     </div>
-  )
+  );
 }
 
-export default CartTotal
+export default CartTotal;

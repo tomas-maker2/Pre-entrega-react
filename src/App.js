@@ -4,21 +4,9 @@ import Navbar from './Components/NavBar/Navbar';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Inicio from './Components/Inicio/Inicio';
 import DataProvider from './Components/Context/DataContext';
-import Item from './Components/Item/Item';
 import Tienda from './Components/Tienda/Tienda';
 import Detalles from './Components/Detalles/Detalles';
 import Footer from './Components/Footer/Footer';
-import Ferrari from './Components/Ferrari/Ferrari';
-import Masserati from './Components/Masserati/Masserati';
-import Lambo from './Components/Lambo/Lambo';
-
-
-
-
-
-
-
-
 
 function App() {
   return (
@@ -32,12 +20,7 @@ function App() {
       <Route path='/contacto' element={<Contacto/>}/>
       <Route path='/cart' element={<CartContent/>}/>
       <Route path='/tienda' element={<Tienda/>}/>
-      <Route path='/tienda/:id' element={<Detalles/>}/>
-      <Route path='/productos/:productosId' element={<Item/>}/>
-      <Route path='/categoriaFerrari' element={<Ferrari/>}/>
-      <Route path='/categoriaMasserati' element={<Masserati/>}/>
-      <Route path='/categoriaLambo' element={<Lambo/>}/>
-      
+      <Route path='/tienda/:id' element={<Detalles/>}/>  
     </Routes>
     
     <Footer/>

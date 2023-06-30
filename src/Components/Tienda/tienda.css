@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 1rem;
 }
 
 .product-card-container{
@@ -14,16 +15,29 @@
     align-items: center;
 }
 
-.title_style{
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    
-}
-
 
 .id{
     display: none;
+}
+
+.botones__categorias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.boton__categoria{
+    border: none;
+    outline: none;
+    padding: .6rem;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #222;
+    color: #ffffff;
+    border-radius: 4px;
 }
