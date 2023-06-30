@@ -13,7 +13,6 @@ function Navbar () {
             active === "nav__menu" ? setActive("nav__menu nav__active") : setActive("nav__menu");
 
 
-            // TOGGLER ICON
 
             toggleIcon === "nav__toggler"
             ? setToggleIcon("nav__toggler toggle")
