@@ -22,7 +22,6 @@ function App() {
       <Route path='/tienda' element={<Tienda/>}/>
       <Route path='/tienda/:id' element={<Detalles/>}/>  
     </Routes>
-    
     <Footer/>
     </BrowserRouter>    
     </DataProvider>

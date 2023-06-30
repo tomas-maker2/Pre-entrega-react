@@ -1,10 +1,5 @@
-// import { useContext } from "react";
-// import {dataContext} from '../Context/DataContext';
-// import { Link } from "react-router-dom";
-
 import React, { useEffect, useState } from 'react';
 import { getFirestore, collection, getDocs, query } from 'firebase/firestore';
-import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { dataContext } from '../Context/DataContext';
 
@@ -43,9 +38,7 @@ function Productos() {
                   <div class='card-body'>
                     <p className='id'>{task.id}</p>
                     <h5 class='card-title'>
-                      <Link className='title_style' to={`/tienda/${task.id}`}>
                         {task.name}
-                      </Link>
                     </h5>
                     <button onClick={() => buyProducts(task)}>Comprar</button>
                     <p class='card-text'>{task.price}$</p>

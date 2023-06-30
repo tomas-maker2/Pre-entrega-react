@@ -35,15 +35,7 @@ function Footer() {
                     <h4>Tienda</h4>
                     <ul>
                         <li>
-                        <Link to={"/categoriaFerrari"} className='link'>Ferrari</Link>
-                        </li>
-
-                        <li>
-                        <Link to={"/categoriaMasserati"} className='link'>Masserati</Link>
-                        </li>
-
-                        <li>
-                        <Link to={"/categoriaLambo"}  className='link'>Lamborghini</Link>
+                        <Link to={"/tienda"} className='link'>Comprar</Link>
                         </li>
                     </ul>
                 </div>
